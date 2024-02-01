@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Mobasshir from '../../Mobasshir.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationPin } from '@fortawesome/free-solid-svg-icons';
-// import { parse } from '@fortawesome/fontawesome-svg-core';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Cart = ({ cart }) => {
   const [brak, setBrak] = useState(0);
@@ -48,7 +46,9 @@ const Cart = ({ cart }) => {
   };
 
   function activityCompleted() {
-    toast('Successfully Completed');
+    // toast('Successfully Completed');
+
+    toast.success('Successfully toasted!');
   }
   return (
     <div>
@@ -126,7 +126,6 @@ const Cart = ({ cart }) => {
         </div>
         <div className='completed'>
           <button onClick={activityCompleted}>Activity Completed</button>
-          <ToastContainer />
         </div>
       </div>
     </div>
