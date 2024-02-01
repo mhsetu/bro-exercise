@@ -20,7 +20,7 @@ const Cart = ({ cart }) => {
     second = second + parseInt(dura);
     console.log(second);
   }
-
+  // Add break function
   function addBreak(e) {
     const storeValue = e.target.innerText.replace('s', '');
 
