@@ -50,7 +50,7 @@ const Cart = ({ cart }) => {
   function activityCompleted() {
     // toast('Successfully Completed');
 
-    toast.success('Successfully toasted!');
+    toast.success('Completed Successfully!');
   }
   return (
     <div>
