@@ -30,9 +30,14 @@ const Shop = () => {
         <div>
           {/* <h3>Left: {product.length}</h3> */}
           <div className='shop-container'>
-            {product.map((pro) => (
-              <Product key={pro.id} item={pro} addToCart={addToCart}></Product>
-            ))}
+            {product?.length > 0 &&
+              product?.map((pro) => (
+                <Product
+                  key={pro.id}
+                  item={pro}
+                  addToCart={addToCart}
+                ></Product>
+              ))}
           </div>
         </div>
         <div className='cart-container'>

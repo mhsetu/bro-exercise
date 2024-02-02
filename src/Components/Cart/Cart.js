@@ -5,6 +5,7 @@ import { faLocationPin } from '@fortawesome/free-solid-svg-icons';
 import toast, { Toaster } from 'react-hot-toast';
 
 const Cart = ({ cart }) => {
+  console.log(cart);
   const [brak, setBrak] = useState(0);
   useEffect(() => {
     addToLocalStorage();
@@ -13,10 +14,11 @@ const Cart = ({ cart }) => {
   let second = 0;
   const times = [10, 20, 30, 40, 50];
 
-  for (const time of cart) {
-    let dura = time.duration.replace('s', '');
-    second = second + parseInt(dura);
-    console.log(second);
+  if (cart?.length > 0) {
+    for (const time of cart) {
+      let dura = time.duration.replace('s', '');
+      second = second + parseInt(dura);
+    }
   }
   // Add break function
   function addBreak(e) {

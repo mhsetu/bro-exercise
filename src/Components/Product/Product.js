@@ -2,6 +2,7 @@ import React from 'react';
 import './Product.css';
 
 const Product = ({ item, addToCart }) => {
+  // console.log(item);
   const { title, duration, img, description } = item;
   return (
     <div className='item-container'>
