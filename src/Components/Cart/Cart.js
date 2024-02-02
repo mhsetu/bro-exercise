@@ -35,14 +35,14 @@ const Cart = ({ cart }) => {
   //   }
 
   const addToLocalStorage = () => {
-    let breaks = {};
+    let breaks = '';
 
     //get Shopping Cart
     const storedCart = localStorage.getItem('breaks');
     if (storedCart) {
       breaks = JSON.parse(storedCart);
     } else {
-      breaks = {};
+      breaks = '';
     }
     setBrak((prev) => breaks);
   };
